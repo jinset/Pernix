@@ -1,0 +1,41 @@
+﻿@model IEnumerable<OlympusWeb.Models.Perito>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.Identificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.Email)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PeritoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PeritoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PeritoId })
+        </td>
+    </tr>
+}
+
+</table>

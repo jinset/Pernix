@@ -1,0 +1,27 @@
+﻿@model IEnumerable<OlympusWeb.Models.Hipoteca>
+
+<section class="post-wrapper-top bgbody">
+    <div class="container">
+        <div class="col-xs-12 clearfix">
+            <h2>Portafolio</h2>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 portfolio-item">
+                <a href="@Url.Action("Details", "Portafolio", new { id = item.HipotecaId })">
+                    <img class="img-responsive" src="@Url.Action("obtenerPlano", "Portafolio", new { id = item.HipotecaId })" />
+                </a>
+                <h3>
+                    @Html.DisplayFor(modelItem => item.Provincia),@Html.DisplayFor(modelItem => item.Canton)
+                </h3>
+
+            </div>            
+        }           
+      </div>
+</section>

@@ -1,0 +1,155 @@
+.imgrelative
+{
+  position: relative;
+  width: 100%;
+}
+.imgabsolute
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-animation-duration:3s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: bgimagen;
+  -webkit-animation-name: bgimagen; 
+}
+.carousel-caption 
+{
+  text-align:left;
+  left: 12%;
+}
+.carousel-caption h1
+  {
+    color:#067c8b;
+     -moz-animation-duration: 3s;
+      -webkit-animation-duration:3s;
+      -moz-animation-name: texto;
+      -webkit-animation-name: texto; 
+      margin-bottom: 0px;
+  }
+.carousel-caption h2
+{
+      margin-top: 0;
+      color:black;
+     -moz-animation-duration: 3s;
+      -webkit-animation-duration:3s;
+      -moz-animation-name: nosotros;
+      -webkit-animation-name: nosotros; 
+       
+}
+.carousel-caption
+{
+  width: 80%;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration:3s;
+  -moz-animation-name: contentin;
+  -webkit-animation-name: contentin;
+}
+
+@-moz-keyframes contentin {
+  from {
+    left: 100%;
+  }
+  50%
+    { 
+     left: 100%;
+    }
+  to {
+    left:12%;
+ 
+  }
+
+}
+ @-webkit-keyframes contentin {
+  from {
+    left: 100%;
+   
+  }
+  50%
+    { 
+     left: 100%;
+    }
+  to {
+    left:12%;
+    
+  }
+
+}
+
+@-moz-keyframes texto {
+    from { 
+      opacity: 0; 
+    }
+
+     to { 
+      opacity: 1; 
+    }
+
+}
+ @-webkit-keyframes texto {
+      from { 
+      opacity: 0; 
+    }
+
+     to { 
+      opacity: 1; 
+    }
+
+
+}
+
+@-moz-keyframes nosotros {
+    from { 
+      opacity: 0; 
+    }
+     to { 
+      opacity: 0.7; 
+    }
+
+}
+ @-webkit-keyframes nosotros {
+      from { 
+      opacity: 0; 
+    }
+    50%
+    { 
+    
+      color:yellow;
+      opacity: 0; 
+    }
+     to { 
+      opacity: 1; 
+    }
+
+
+}
+ @-webkit-keyframes bgimagen {
+      from { 
+      opacity: 0; 
+    }
+     30%
+    { 
+      opacity: 0; 
+    }
+
+     to { 
+      opacity: 1; 
+    }
+}
+ @-moz-keyframes bgimagen {
+      from { 
+      opacity: 0; 
+    }
+     30%
+    { 
+      opacity: 0; 
+    }
+
+     to { 
+      opacity: 1; 
+    }
+
+
+}

@@ -1,0 +1,40 @@
+﻿@model OlympusWeb.Models.Hipoteca
+
+<section class="post-wrapper-top bgbody">
+    <div class="container">
+        <div class="col-xs-12 clearfix">
+            <h2>Portafolio</h2>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                Propiedad
+                <small>@Html.DisplayFor(model => model.Provincia)</small>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <img class ="img-responsive" src="@Url.Action("obtenerFoto", "Portafolio", new { id = Model.HipotecaId })" />
+        </div>
+
+        <div class="col-sm-4">
+            <h3>Propiedad</h3>
+            <p class="detallesPropiedad">Ubicada en @Html.DisplayFor(model => model.Canton) de @Html.DisplayFor(model => model.Provincia), distrito 
+            @Html.DisplayFor(model => model.Distrito)
+            </p>
+            <h3>Detalles De Propiedad</h3>
+            <ul id="listaPro" class="detallesPropiedad">
+                <li>Esta propiedad es de tipo @Html.DisplayFor(model => model.TipoPropiedad)</li>
+                <li>El cliente pide un monto de $ @Html.DisplayFor(model => model.Monto)</li>
+            </ul>
+            @* EL primer Invertir es el nombre del boton *@
+            @Html.ActionLink("Invertir", "Invertir", new { id = Model.HipotecaId }, new { @class = "btn btn btn-primary" })
+        </div>
+    </div>
+
+</section>

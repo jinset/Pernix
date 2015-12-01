@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+View
+
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+    </tr>
+
+    @foreach (var Abogado in ViewBag.Abogado)
+    {
+        <tr>
+            <td>
+                @Abogado.Persona.Nombre
+            </td>
+            <td>
+                @Abogado.Persona.Apellido
+            </td>
+            <td>
+                Abogado
+            </td>
+            <td>
+                @Abogado.Estado
+            </td>
+            <td>
+                @Html.ActionLink("Dar de alta", "Alta", new { id = @Abogado.AbogadoId, tipo = "Abogado" }) |
+            </td>
+            <td>
+                @Html.ActionLink("Dar de baja", "Baja", new { id = @Abogado.AbogadoId, tipo = "Abogado" }) |
+            </td>
+        </tr>
+    }
+    @foreach (var Perito in ViewBag.Perito)
+    {
+        <tr>
+            <td>
+                @Perito.Persona.Nombre
+          
+            <td>
+                @Perito.Persona.Apellido
+            </td>
+            <td>
+                Perito
+            </td>
+            <td>
+                @Perito.Estado
+            </td>
+            <td>
+                @Html.ActionLink("Dar de alta", "Alta", new { id = @Perito.PeritoId, tipo = "Perito" }) |
+            </td>
+            <td>
+                @Html.ActionLink("Dar de baja", "Baja", new { id = @Perito.PeritoId, tipo = "Perito" }) |
+            </td>
+
+</tr>
+    }
+    @foreach (var Agente in ViewBag.Agente)
+    {
+        <tr>
+            <td>
+                @Agente.Persona.Nombre
+            </td>
+            <td>
+                @Agente.Persona.Apellido
+            </td>
+            <td>
+                Agente
+            </td>
+            <td>
+                @Agente.Estado
+            </td>
+            <td>
+                @Html.ActionLink("Dar de alta", "Alta", new { id = @Agente.AgenteId, tipo = "Agente" }) |
+            </td>
+            <td>
+                @Html.ActionLink("Dar de baja", "Baja", new { id = @Agente.AgenteId, tipo = "Agente" }) |
+            </td>
+        </tr>
+    }
+    @foreach (var AgenteIns in ViewBag.AgenteIns)
+    {
+        <tr>
+            <td>
+                @AgenteIns.Persona.Nombre
+            </td>
+            <td>
+                @AgenteIns.Persona.Apellido
+            </td>
+            <td>
+                AgenteIns
+            </td>
+            <td>
+                @AgenteIns.Estado
+            </td>
+            <td>
+                @Html.ActionLink("Dar de alta", "Alta", new { id = @AgenteIns.AgenteInsId, tipo = "AgenteIns" }) |
+            </td>
+            <td>
+                @Html.ActionLink("Dar de baja", "Baja", new { id = @AgenteIns.AgenteInsId, tipo = "AgenteIns" }) |
+            </td>
+        </tr>
+    }
+    @foreach (var Hipoteca in ViewBag.Hipoteca)
+    {
+        <tr>
+            <td>
+                @Hipoteca.Persona.Nombre
+            </td>
+            <td>
+                @Hipoteca.Persona.Apellido
+            </td>
+            <td>
+                Hipoteca
+            </td>
+            <td>
+                @Hipoteca.Estado
+            </td>
+            <td>
+                @Html.ActionLink("Dar de alta", "Alta", new { id = @Hipoteca.HipotecaId, tipo = "Hipoteca" }) |
+            </td>
+            <td>
+                @Html.ActionLink("Dar de baja", "Baja", new { id = @Hipoteca.HipotecaId, tipo = "Hipoteca" }) |
+            </td>
+        </tr>
+    }
+</table>

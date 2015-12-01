@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="@Url.Action("Index","Home")" class="navbar-brand"><img src="~/Content/images/logoBrand.png" /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Home, "Index", "Home")</li>
+                    <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Client, "Create", "Hipoteca")</li>
+                    <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Agent, "Create", "Agente")</li>
+                    <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Inversionista, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                    <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Portafolio, "Index", "Portafolio")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+                @*<a href="@Url.Action("SetLanguage", "Language", new { @name = "es" })">Español</a>
+                <a href="@Url.Action("SetLanguage", "Language", new { @name = "en-US" })">English</a>*@
+            </div>          
+        </div>
+    </div>
+    <div id="wrap">
+        <div id="main">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="footerBg jt-shadow">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-xs-12">
+                    <div class="contenido">
+                        <img class="footerlogo" src="~/Content/images/logoFooter.png"><br>
+                        <p>Visión:Ser reconocida como la empresa lider en la consultoria hipotecaria online.</p>
+                        <p>Misión:Promover el exito de nuestros clientes con soluciones hipotecarias adecuadas para sus necesidades, facilitar el desarrolo de nuestros colaboradores,generar valor y confidencialidad con nuestros inversionistas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-12">
+                    <div class="contenido">
+                        <div class="title">
+                            <h3>Persona</h3>
+                        </div>
+                        <div class="links">
+                            <p>Contamos con seguridad, confidencialidad y ética profesional.</p>
+                            <ul>
+                                <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Client, "Create", "Hipoteca")</li>
+                                <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Agent, "Create", "Agente")</li>
+                                <li>@Html.ActionLink(OlympusWeb.Resources.Menu.Inversionista, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-12">
+                    <div class="contenido">
+                        <div class="title">
+                            <h3>Chat-Online</h3>
+                        </div>
+                        <p>skype123</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-12">
+                    <div class="contenido ">
+                        <div class="title">
+                            <h3>Contactenos</h3>
+                        </div>
+                        <p>Puede contactarnos al siguiente correo empresa@correo.com.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/carousel")
+    @Scripts.Render("~/bundles/main")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

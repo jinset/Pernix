@@ -1,0 +1,66 @@
+﻿@model OlympusWeb.Models.Hipoteca
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hipoteca</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPlano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPlano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Provincia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Provincia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distrito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distrito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Canton)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Canton)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GravamenesAnotaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GravamenesAnotaciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPropiedad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPropiedad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HipotecaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

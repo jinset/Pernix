@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A278C97-C9EB-4993-9771-F40BD896262F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OlympusWeb</RootNamespace>
+    <AssemblyName>OlympusWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AbogadoController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AgenteController.cs" />
+    <Compile Include="Controllers\AgenteInsController.cs" />
+    <Compile Include="Controllers\ColaboradoresController.cs" />
+    <Compile Include="Controllers\ContratoesController.cs" />
+    <Compile Include="Controllers\HipotecaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PeritoController.cs" />
+    <Compile Include="Controllers\PortafolioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270022092_Profile.cs" />
+    <Compile Include="Migrations\201412270022092_Profile.Designer.cs">
+      <DependentUpon>201412270022092_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270028401_Profile views.cs" />
+    <Compile Include="Migrations\201412270028401_Profile views.Designer.cs">
+      <DependentUpon>201412270028401_Profile views.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270057226_Persona inversionista.cs" />
+    <Compile Include="Migrations\201412270057226_Persona inversionista.Designer.cs">
+      <DependentUpon>201412270057226_Persona inversionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270059425_PersonaInvi.cs" />
+    <Compile Include="Migrations\201412270059425_PersonaInvi.Designer.cs">
+      <DependentUpon>201412270059425_PersonaInvi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270101304_Persona.cs" />
+    <Compile Include="Migrations\201412270101304_Persona.Designer.cs">
+      <DependentUpon>201412270101304_Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270103518_quitarPersonaId.cs" />
+    <Compile Include="Migrations\201412270103518_quitarPersonaId.Designer.cs">
+      <DependentUpon>201412270103518_quitarPersonaId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412271834054_inversionistaborrado.cs" />
+    <Compile Include="Migrations\201412271834054_inversionistaborrado.Designer.cs">
+      <DependentUpon>201412271834054_inversionistaborrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412271844327_borraridinversionsita.cs" />
+    <Compile Include="Migrations\201412271844327_borraridinversionsita.Designer.cs">
+      <DependentUpon>201412271844327_borraridinversionsita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412271853558_required.cs" />
+    <Compile Include="Migrations\201412271853558_required.Designer.cs">
+      <DependentUpon>201412271853558_required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412272004391_modelos.cs" />
+    <Compile Include="Migrations\201412272004391_modelos.Designer.cs">
+      <DependentUpon>201412272004391_modelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501111524560_Contratos.cs" />
+    <Compile Include="Migrations\201501111524560_Contratos.Designer.cs">
+      <DependentUpon>201501111524560_Contratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501111530455_NombreTablaAbogado.cs" />
+    <Compile Include="Migrations\201501111530455_NombreTablaAbogado.Designer.cs">
+      <DependentUpon>201501111530455_NombreTablaAbogado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501111534025_NombredeTablas.cs" />
+    <Compile Include="Migrations\201501111534025_NombredeTablas.Designer.cs">
+      <DependentUpon>201501111534025_NombredeTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501111659565_hipotecas.cs" />
+    <Compile Include="Migrations\201501111659565_hipotecas.Designer.cs">
+      <DependentUpon>201501111659565_hipotecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501221550027_tipoFoto.cs" />
+    <Compile Include="Migrations\201501221550027_tipoFoto.Designer.cs">
+      <DependentUpon>201501221550027_tipoFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501260011584_estadoenum.cs" />
+    <Compile Include="Migrations\201501260011584_estadoenum.Designer.cs">
+      <DependentUpon>201501260011584_estadoenum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501260014037_eliminarestados.cs" />
+    <Compile Include="Migrations\201501260014037_eliminarestados.Designer.cs">
+      <DependentUpon>201501260014037_eliminarestados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501260016035_eliminarestados2.cs" />
+    <Compile Include="Migrations\201501260016035_eliminarestados2.Designer.cs">
+      <DependentUpon>201501260016035_eliminarestados2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501260017200_enumAbogado.cs" />
+    <Compile Include="Migrations\201501260017200_enumAbogado.Designer.cs">
+      <DependentUpon>201501260017200_enumAbogado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501260020459_enumTodos.cs" />
+    <Compile Include="Migrations\201501260020459_enumTodos.Designer.cs">
+      <DependentUpon>201501260020459_enumTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501260022265_quitarestadodeinversionista.cs" />
+    <Compile Include="Migrations\201501260022265_quitarestadodeinversionista.Designer.cs">
+      <DependentUpon>201501260022265_quitarestadodeinversionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501260023562_enuminversionista.cs" />
+    <Compile Include="Migrations\201501260023562_enuminversionista.Designer.cs">
+      <DependentUpon>201501260023562_enuminversionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502200216113_new-migration.cs" />
+    <Compile Include="Migrations\201502200216113_new-migration.Designer.cs">
+      <DependentUpon>201502200216113_new-migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502281802211_montoHipoteca.cs" />
+    <Compile Include="Migrations\201502281802211_montoHipoteca.Designer.cs">
+      <DependentUpon>201502281802211_montoHipoteca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Abogado.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Agente.cs" />
+    <Compile Include="Models\AgenteIns.cs" />
+    <Compile Include="Models\Contrato.cs" />
+    <Compile Include="Models\FotosPropiedad.cs" />
+    <Compile Include="Models\Hipoteca.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Perito.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\ViewHipoteca.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\FormPersona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormPersona.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FormPersona.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormPersona.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Menu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animaciones.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\agenteBg.jpg" />
+    <Content Include="Content\images\agentePic.png" />
+    <Content Include="Content\images\bgFooterHeader.png" />
+    <Content Include="Content\images\bg_body.jpg" />
+    <Content Include="Content\images\bg_logo.jpg" />
+    <Content Include="Content\images\clienteBg.jpg" />
+    <Content Include="Content\images\clientePic.png" />
+    <Content Include="Content\images\texture.jpg" />
+    <Content Include="Content\images\icons.png" />
+    <Content Include="Content\images\inversionistaBg.jpg" />
+    <Content Include="Content\images\inversionistaPic.png" />
+    <Content Include="Content\images\logoBrand.png" />
+    <Content Include="Content\images\logoCentral.png" />
+    <Content Include="Content\images\logoFooter.png" />
+    <Content Include="Content\images\serv1.jpg" />
+    <Content Include="Content\index.css" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\owlcarousel.css" />
+    <Content Include="Content\owltheme.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\OlympusWeb.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\carousel.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.fileupload.js" />
+    <Content Include="Scripts\jquery.iframe-transport.js" />
+    <Content Include="Scripts\jquery.knob.js" />
+    <Content Include="Scripts\jquery.ui.widget.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Agente\Create.cshtml" />
+    <Content Include="Views\Agente\Delete.cshtml" />
+    <Content Include="Views\Agente\Details.cshtml" />
+    <Content Include="Views\Agente\Edit.cshtml" />
+    <Content Include="Views\Agente\Index.cshtml" />
+    <Content Include="Views\Hipoteca\Create.cshtml" />
+    <Content Include="Views\Hipoteca\Delete.cshtml" />
+    <Content Include="Views\Hipoteca\Details.cshtml" />
+    <Content Include="Views\Hipoteca\Edit.cshtml" />
+    <Content Include="Views\Hipoteca\Index.cshtml" />
+    <Content Include="Views\AgenteIns\Create.cshtml" />
+    <Content Include="Views\AgenteIns\Delete.cshtml" />
+    <Content Include="Views\AgenteIns\Details.cshtml" />
+    <Content Include="Views\AgenteIns\Edit.cshtml" />
+    <Content Include="Views\AgenteIns\Index.cshtml" />
+    <Content Include="Views\Abogado\Create.cshtml" />
+    <Content Include="Views\Abogado\Delete.cshtml" />
+    <Content Include="Views\Abogado\Details.cshtml" />
+    <Content Include="Views\Abogado\Edit.cshtml" />
+    <Content Include="Views\Abogado\Index.cshtml" />
+    <Content Include="Views\Perito\Create.cshtml" />
+    <Content Include="Views\Perito\Delete.cshtml" />
+    <Content Include="Views\Perito\Details.cshtml" />
+    <Content Include="Views\Perito\Edit.cshtml" />
+    <Content Include="Views\Perito\Index.cshtml" />
+    <Content Include="Views\Colaboradores\Index.cshtml" />
+    <Content Include="Views\Portafolio\Create.cshtml" />
+    <Content Include="Views\Portafolio\Index.cshtml" />
+    <Content Include="Views\Portafolio\Details.cshtml" />
+    <Content Include="Views\Contratoes\Create.cshtml" />
+    <Content Include="Views\Contratoes\Delete.cshtml" />
+    <Content Include="Views\Contratoes\Details.cshtml" />
+    <Content Include="Views\Contratoes\Edit.cshtml" />
+    <Content Include="Views\Contratoes\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Language\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201412270022092_Profile.resx">
+      <DependentUpon>201412270022092_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270028401_Profile views.resx">
+      <DependentUpon>201412270028401_Profile views.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270057226_Persona inversionista.resx">
+      <DependentUpon>201412270057226_Persona inversionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270059425_PersonaInvi.resx">
+      <DependentUpon>201412270059425_PersonaInvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270101304_Persona.resx">
+      <DependentUpon>201412270101304_Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270103518_quitarPersonaId.resx">
+      <DependentUpon>201412270103518_quitarPersonaId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412271834054_inversionistaborrado.resx">
+      <DependentUpon>201412271834054_inversionistaborrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412271844327_borraridinversionsita.resx">
+      <DependentUpon>201412271844327_borraridinversionsita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412271853558_required.resx">
+      <DependentUpon>201412271853558_required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412272004391_modelos.resx">
+      <DependentUpon>201412272004391_modelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501111524560_Contratos.resx">
+      <DependentUpon>201501111524560_Contratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501111530455_NombreTablaAbogado.resx">
+      <DependentUpon>201501111530455_NombreTablaAbogado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501111534025_NombredeTablas.resx">
+      <DependentUpon>201501111534025_NombredeTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501111659565_hipotecas.resx">
+      <DependentUpon>201501111659565_hipotecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501221550027_tipoFoto.resx">
+      <DependentUpon>201501221550027_tipoFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501260011584_estadoenum.resx">
+      <DependentUpon>201501260011584_estadoenum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501260014037_eliminarestados.resx">
+      <DependentUpon>201501260014037_eliminarestados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501260016035_eliminarestados2.resx">
+      <DependentUpon>201501260016035_eliminarestados2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501260017200_enumAbogado.resx">
+      <DependentUpon>201501260017200_enumAbogado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501260020459_enumTodos.resx">
+      <DependentUpon>201501260020459_enumTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501260022265_quitarestadodeinversionista.resx">
+      <DependentUpon>201501260022265_quitarestadodeinversionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501260023562_enuminversionista.resx">
+      <DependentUpon>201501260023562_enuminversionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502200216113_new-migration.resx">
+      <DependentUpon>201502200216113_new-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502281802211_montoHipoteca.resx">
+      <DependentUpon>201502281802211_montoHipoteca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FormPersona.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormPersona.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FormPersona.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormPersona.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Menu.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Menu.en.resx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53260</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6900/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
